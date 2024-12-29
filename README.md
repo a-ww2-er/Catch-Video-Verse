@@ -1,4 +1,4 @@
-# VideoVerse: Next-Gen Content Creation Platform
+# Catch-VideoVerse: Next-Gen Content Creation Platform
 
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
@@ -6,9 +6,9 @@
 ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
-VideoVerse is a cutting-edge content creation and sharing platform that empowers creators and engages viewers through innovative features and advanced technologies.
+CatchVideoVerse is a cutting-edge content creation and sharing platform that empowers creators and engages viewers through innovative features and advanced technologies.
 
-![VideoVerse Banner](https://via.placeholder.com/1200x300?text=VideoVerse:+Next-Gen+Content+Creation+Platform)
+![VideoVerse Banner](https://via.placeholder.com/1200x300?text=Catch:+Next-Gen+Content+Creation+Platform)
 
 ## 🚀 Features
 
