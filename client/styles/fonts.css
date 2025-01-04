@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Alberta Sans';
+  src: url('/fonts/alberta-sans/AlbertaSans-Regular.woff2') format('woff2'),
+       url('/fonts/alberta-sans/AlbertaSans-Regular.woff') format('woff');
+  font-weight: 400; /* Adjust weights as needed */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Alberta Sans';
+  src: url('/fonts/alberta-sans/AlbertaSans-Bold.woff2') format('woff2'),
+       url('/fonts/alberta-sans/AlbertaSans-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
