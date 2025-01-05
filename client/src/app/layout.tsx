@@ -1,12 +1,6 @@
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import {
-  Albert_Sans,
-  DM_Sans,
-  Geist,
-  Geist_Mono,
-  Yesteryear,
-} from "next/font/google";
+import { Albert_Sans, DM_Sans, Yesteryear } from "next/font/google";
 import "./globals.css";
 
 const albertSans = Albert_Sans({

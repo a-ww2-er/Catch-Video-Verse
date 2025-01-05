@@ -1,9 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-type Props = {};
-
-const HeroSection = (props: Props) => {
+const HeroSection = () => {
   return (
     <div className="flex flex-col gap-4 items-center mt-16 justify-center">
       <h1 className="font-bold text-[5.5rem] tracking-tight">
