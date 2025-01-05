@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
@@ -11,6 +12,22 @@ const HeroSection = () => {
         Meet the complete video platform that can transform the way you do
         business
       </span>
+      <div className="flex gap-2">
+        <span className="bg-green-500 cursor-pointer flex items-center px-5 py-3 rounded-lg gap-4">
+          {" "}
+          <p className="text-white text-lg font-medium">See Plans</p>
+          <p className="bg-gray-300 p-2 px-3 rounded-lg">
+            <ArrowRight size={18} />
+          </p>
+        </span>
+        <span className="bg-gray-200 cursor-pointer flex items-center px-5 py-3 rounded-lg gap-4">
+          {" "}
+          <p className="text-black text-lg font-medium">Join for free</p>
+          <p className="bg-white p-2 px-3 rounded-lg">
+            <ArrowRight size={18} />
+          </p>
+        </span>
+      </div>
       <div>
         <Image
           className="w-full h-[100vh]"
