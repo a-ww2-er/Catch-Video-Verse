@@ -1,9 +1,7 @@
 import React from "react";
 import InfoCard from "./InfoCard";
 
-type Props = {};
-
-const VideoExperienceSection = (props: Props) => {
+const VideoExperienceSection = () => {
   return (
     <div className="flex flex-col justify-center items-center gap-10 p-14">
       <section className="flex flex-col justify-center items-center gap-2 py-10">
