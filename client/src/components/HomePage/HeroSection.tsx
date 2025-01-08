@@ -4,7 +4,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col gap-4 items-center mt-16 justify-center">
+    <div className=" w-full min-h-screen  bg-gradient-to-b from-[#FFFFFF] via-[#EEEEEE] to-[#DCDCDC] flex flex-col gap-4 items-center mt-16 justify-center">
       <h1 className="font-bold text-[5.5rem] tracking-tight">
         Do more with video
       </h1>
@@ -28,7 +28,7 @@ const HeroSection = () => {
           </p>
         </span>
       </div>
-      <div>
+      <div className="mb-8">
         <Image
           className="w-full h-[100vh]"
           src={"/macbook.png"}

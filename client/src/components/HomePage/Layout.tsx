@@ -23,9 +23,7 @@ const HomeLayout = ({ children, title, description, keywords }: Props) => {
       />
       <div className="scroll-smooth snap-mandatory snap-y h-screen overflow-auto w-full">
         <Navbar />
-        <main className="flex min-h-screen flex-col items-center justify-between  bg-gradient-to-b from-[#FFFFFF] via-[#EEEEEE] to-[#DCDCDC]">
-          {children}
-        </main>
+        <main className="">{children}</main>
       </div>
     </>
   );
