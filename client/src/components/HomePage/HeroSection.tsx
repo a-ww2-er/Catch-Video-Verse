@@ -30,7 +30,6 @@ const HeroSection = () => {
       </div>
       <div className="mb-8">
         <Image
-          className="w-full h-[100vh]"
           src={"/macbook.png"}
           width={600}
           height={400}

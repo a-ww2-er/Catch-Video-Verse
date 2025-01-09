@@ -3,6 +3,7 @@ import VideoExperienceSection from "@/components/HomePage/VideoExperienceSection
 import { useEffect, useState } from "react";
 import HeroSection from "../components/HomePage/HeroSection";
 import HomeLayout from "../components/HomePage/Layout";
+import ToolSuite from "@/components/HomePage/ToolSuite";
 export default function Home() {
   //prevent hydration issues
   const [hydrated, setHydrated] = useState(false);
@@ -21,6 +22,7 @@ export default function Home() {
       <div>
         <HeroSection />
         <VideoExperienceSection />
+        <ToolSuite />
       </div>
     </HomeLayout>
   );
