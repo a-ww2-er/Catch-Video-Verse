@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
       "picsum.photos",
       "res.cloudinary.com",
       "localhost",
-      "placehold.co",
+      "placehold.svg",
     ],
     remotePatterns: [
       {
@@ -30,7 +30,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "placehold.co",
+        hostname: "placehold.svg",
         port: "",
         pathname: "/**",
       },
