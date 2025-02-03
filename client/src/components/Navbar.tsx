@@ -1,13 +1,15 @@
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
+import { Button } from "./ui/button";
+import Link from "next/link";
+import LoginModal from "./LoginPage/LoginModal";
 
 const Navbar = () => {
   const router = useRouter();
 
   const navigateToAuth = () => {
     router.push("/auth");
-
   };
-  
+
   const navItems = [
     {
       name: "Product",
@@ -109,32 +111,17 @@ const Navbar = () => {
               <a href="#" className="hover:bg-gray-300 rounded-xl  px-4 py-3">
                 Contact Sales
               </a>
-              <a onClick={navigateToAuth} className="hover:bg-gray-300 rounded-xl  px-4 py-3">
+              <Link
+                href={"/login"}
+                // onClick={navigateToAuth}
+                className="hover:bg-gray-300 rounded-xl  px-4 py-3"
+              >
                 Login
-              </a>
-              <a href="#" className="  px-4 py-3">
-                <button className="bg-green-500 text-white px-4 py-2 rounded flex items-center hover:bg-green-600">
-                  {" "}
-                  Go
-                  <svg
-                    className="h-5 w-5 mr-2"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 12h14M12 5l7 7-7 7"
-                    />
-                  </svg>
-                </button>
-              </a>
+              </Link>
+              <LoginModal />
             </div>
             <div className="flex items-center md:hidden">
-              <button id="menu-btn" className="text-gray-300 hover:text-white">
+              <Button id="menu-btn" className="text-gray-300 hover:text-white">
                 <svg
                   className="w-6 h-6"
                   fill="none"
@@ -149,7 +136,7 @@ const Navbar = () => {
                     d="M4 6h16M4 12h16M4 18h16"
                   ></path>
                 </svg>
-              </button>
+              </Button>
             </div>
           </div>
         </div>
