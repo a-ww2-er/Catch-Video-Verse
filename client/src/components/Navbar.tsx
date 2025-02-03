@@ -1,13 +1,5 @@
-import { useRouter } from "next/router";
-
 const Navbar = () => {
-  const router = useRouter();
 
-  const navigateToAuth = () => {
-    router.push("/auth");
-
-  };
-  
   const navItems = [
     {
       name: "Product",
@@ -109,7 +101,7 @@ const Navbar = () => {
               <a href="#" className="hover:bg-gray-300 rounded-xl  px-4 py-3">
                 Contact Sales
               </a>
-              <a onClick={navigateToAuth} className="hover:bg-gray-300 rounded-xl  px-4 py-3">
+              <a className="hover:bg-gray-300 rounded-xl  px-4 py-3">
                 Login
               </a>
               <a href="#" className="  px-4 py-3">

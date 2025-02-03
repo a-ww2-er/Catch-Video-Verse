@@ -21,7 +21,7 @@ const ToolSuite = () => {
 
       {/* Logo Row */}
       <div className="w-full flex items-center justify-center">
-        <Marquee play={true} speed={50} gradient={true} className="w-full">
+        <Marquee play={true} speed={50} gradient={true} gradientColor="#F3F4F6" className="w-full">
           {logos.map((logo, index) => (
             <div
               key={index}
