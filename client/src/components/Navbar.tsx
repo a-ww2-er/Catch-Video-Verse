@@ -4,8 +4,6 @@ import Link from "next/link";
 import LoginModal from "./LoginPage/LoginModal";
 
 const Navbar = () => {
-  const router = useRouter();
-
   const navigateToAuth = () => {
     router.push("/auth");
   };

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import HeroSection from "../components/HomePage/HeroSection";
 import HomeLayout from "../components/HomePage/Layout";
 import ToolSuite from "@/components/HomePage/ToolSuite";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from "@/components/ui/accordion";
 export default function Home() {
   //prevent hydration issues
   const [hydrated, setHydrated] = useState(false);
