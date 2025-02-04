@@ -7,46 +7,70 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogHeader,
   DialogTitle,
+  DialogTrigger,
 } from "@/components/ui/dialog";
+import { useRouter } from "next/navigation";
 
 export default function LoginModal() {
   const [showPassword, setShowPassword] = useState(false);
+  const [userData, setUserData] = useState<{ email: string; password: string }>(
+    {
+      email: "",
+      password: "",
+    }
+  );
   const [isLoading, setIsLoading] = useState(false);
-  const [open, setOpen] = useState(true);
-
+  const [open, setOpen] = useState(false);
+  const router = useRouter();
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => {
+      // router.push("/dashboard");
+      const userDataJSON = JSON.stringify(userData);
+      localStorage.setItem("user", userDataJSON);
+      console.log(userDataJSON);
+      setTimeout(resolve, 1000);
+      router.push("/");
+    });
     setIsLoading(false);
   };
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
+      <DialogTrigger>
+        <button className="bg-green-500 text-white px-4 py-2 rounded flex items-center hover:bg-green-600">
+          {" "}
+          Go
+          <svg
+            className="h-5 w-5 mr-2"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M5 12h14M12 5l7 7-7 7"
+            />
+          </svg>
+        </button>
+      </DialogTrigger>{" "}
       <DialogContent className="sm:max-w-md">
+        <DialogClose
+          className="display-none !opacity-0 
+        !hidden"
+          hidden
+        ></DialogClose>
         <DialogHeader>
-          <button className="bg-green-500 text-white px-4 py-2 rounded flex items-center hover:bg-green-600">
-            {" "}
-            Go
-            <svg
-              className="h-5 w-5 mr-2"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M5 12h14M12 5l7 7-7 7"
-              />
-            </svg>
-          </button>
+          <DialogTitle>Log in to your account</DialogTitle>
         </DialogHeader>
         <Button
           variant="ghost"
@@ -136,7 +160,11 @@ export default function LoginModal() {
               <Input
                 id="email"
                 type="email"
+                value={userData.email}
                 placeholder="you@example.com"
+                onChange={(e) =>
+                  setUserData({ ...userData, email: e.target.value })
+                }
                 required
                 className="h-11"
               />
@@ -147,6 +175,10 @@ export default function LoginModal() {
                 <Input
                   id="password"
                   type={showPassword ? "text" : "password"}
+                  value={userData.password}
+                  onChange={(e) =>
+                    setUserData({ ...userData, password: e.target.value })
+                  }
                   required
                   className="h-11 pr-10"
                 />
@@ -175,7 +207,7 @@ export default function LoginModal() {
               Forgot your password?
             </Button>
             <Button
-              className="h-11 w-full bg-[#00adef] hover:bg-[#00adef]/90"
+              className="h-11 w-full bg-green-500 hover:bg-[#22c55e]/90"
               type="submit"
             >
               {isLoading ? (

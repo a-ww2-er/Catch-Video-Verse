@@ -1,12 +1,12 @@
 import { useRouter } from "next/navigation";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import Link from "next/link";
-import LoginModal from "./LoginPage/LoginModal";
+import LoginModal from "../LoginPage/LoginModal";
 
 const Navbar = () => {
-  const navigateToAuth = () => {
-    router.push("/auth");
-  };
+  // const navigateToAuth = () => {
+  //   router.push("/auth");
+  // };
 
   const navItems = [
     {
