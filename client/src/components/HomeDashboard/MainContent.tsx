@@ -10,7 +10,7 @@ export function MainContent() {
             LIVE
           </div>
           <Image
-            src="/placeholder.svg"
+            src="https://i.pinimg.com/736x/39/8a/12/398a12c880571668c6763527b5aeab20.jpg"
             alt="Stream preview"
             className="object-cover"
             fill

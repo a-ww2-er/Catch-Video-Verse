@@ -39,17 +39,18 @@ const channels = [
 export function Sidebar() {
   return (
     <div className="w-60 border-r bg-background flex flex-col">
-      <div className="p-3 flex items-center justify-between border-b">
-        <h2 className="font-semibold">For You</h2>
-        <Button variant="ghost" size="icon" className="h-8 w-8">
-          <ChevronLeft className="h-4 w-4" />
-        </Button>
+      <div className="p-3 flex flex-col items-start gap-3 border-b">
+        <h2 className="">Home</h2>
+        <h2 className="">Trending</h2>
+        <h2 className="">Subscriptions</h2>
+        <h2 className="">Library</h2>
+        <h2 className="">Watch Later</h2>
       </div>
       <ScrollArea className="flex-1">
         <div className="p-3">
           <h3 className="mb-4 text-sm font-semibold">LIVE CHANNELS</h3>
-          <div className="space-y-4">
-            {channels.map((channel) => (
+           <div className="space-y-4">
+            {/* {channels.map((channel) => (
               <div key={channel.name} className="flex gap-3">
                 <Avatar className="h-9 w-9">
                   <AvatarImage src={channel.avatar} />
@@ -69,9 +70,10 @@ export function Sidebar() {
                   </p>
                 </div>
               </div>
-            ))}
+            ))} */}
           </div>
         </div>
+         <h2 className="font-bold">Personalization</h2>
       </ScrollArea>
     </div>
   );

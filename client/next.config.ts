@@ -14,6 +14,7 @@ const nextConfig: NextConfig = {
       "res.cloudinary.com",
       "localhost",
       "placehold.svg",
+      "i.pinimg.com"
     ],
     remotePatterns: [
       {
@@ -55,6 +56,12 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "m.media-amazon.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "i.pinimg.com",
         port: "",
         pathname: "/**",
       },
